@@ -1,3 +1,88 @@
+// import {useState} from "react"
+
+// import todoList from "./todoList.js"
+
+
+
+// function Todo() {
+//     const [toggleTodo, setToggleTodo] = useState(false);
+//     const [formData, setFormData] = useState({})
+
+//     function handleToggle() {
+//         setToggleTodo(!toggleTodo)
+//     }
+
+//     function handleInputChange(event) {
+//         const name = event.target.name;
+//         const value = event.target.value;
+        
+//         formData[name] = value
+//         formData["isCompleted"] = false
+
+//         // console.log(formData)
+//     }
+
+//     function handleFormSubmit(event){
+//         event.preventDefault()
+//         todoList.push(formData)
+//         console.log("form submitted")
+//         setToggleTodo(!toggleTodo)
+//         // console.log(formData)
+//         setFormData({})
+//     }
+    
+
+//     return (
+//         <>
+//         <section>
+//             <h1>WELCOME TO THE TODO</h1>
+//         </section>
+
+//         <section>
+//             <h1>Todo-List</h1>
+//             <button onClick={handleToggle}>Add todo</button>
+//             <div>
+//                 {(todoList.length == 0)? 
+//                 <h1>Nothing on your todo</h1> : 
+//                 todoList.map((item, index) => (
+//                     <div key={index}>
+//                         <h3>{item.title}</h3>
+//                         <p>{item.time}</p>
+//                         <div style={{height: "30px", width: "30px", backgroundColor: "green"}}>
+//                             {item.isCompleted ? "✓" : "X"} 
+//                         </div>
+//                     </div>
+//                 ))}
+//             </div>
+//         </section>
+
+//         {
+//             toggleTodo? 
+//             <section>
+//                 <form onSubmit={handleFormSubmit}>
+//                     <fieldset>
+//                         <legend>todo info</legend>
+//                         <label htmlFor="title">Title</label>
+//                         <input onChange={handleInputChange} type="text" id="title" name= "title" />
+//                         <label htmlFor="time">time</label>
+//                         <input onChange={handleInputChange} type="text" id="time" name="time" />
+
+//                         <input type="submit" />
+//                     </fieldset>
+//                 </form>
+//             </section>
+//             : 
+//             null 
+//         }
+
+
+//         </>
+//     )
+// }
+
+// export default Todo
+
+
 import {useState} from "react"
 
 import todoList from "./todoList.js"
