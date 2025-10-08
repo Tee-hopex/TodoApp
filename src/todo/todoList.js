@@ -7,7 +7,7 @@ const todoList = [
     {
         title : "brush your teeth",
         time : "8:30am",
-        isCompleted: true,
+        isCompleted: false,
     }
 ]
 

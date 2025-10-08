@@ -129,11 +129,23 @@ function Todo() {
             <div className="todo-list-container">
                 {(todoList.length == 0)? 
                 <h1 className="empty-message">Nothing on your todo</h1> : 
+                
                 todoList.map((item, index) => (
                     <div className="todo-item" key={index}>
                         <h3 className="todo-title">{item.title}</h3>
                         <p className="todo-time">{item.time}</p>
-                        <div className="todo-status" style={{height: "30px", width: "30px", backgroundColor: "green"}}>
+                        <div onClick={() => {
+                            console.log(index)
+                            // console.log(item.isCompleted)
+                            if (todoList[index].isCompleted == true) {
+                                todoList[index].isCompleted=false
+                            } else{
+                                todoList[index].isCompleted=true
+                            }
+                            console.log(todoList[index].isCompleted)
+
+                            
+                        }} className="todo-status" style={{height: "30px", width: "30px", backgroundColor: item.isCompleted? "green": "red"}}>
                             {item.isCompleted ? "✓" : "X"} 
                         </div>
                     </div>
