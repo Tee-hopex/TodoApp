@@ -92,6 +92,7 @@ import './Todo.css'
 function Todo() {
     const [toggleTodo, setToggleTodo] = useState(false);
     const [formData, setFormData] = useState({})
+    const [completed, setCompleted] = useState(false)
 
     function handleToggle() {
         setToggleTodo(!toggleTodo)
